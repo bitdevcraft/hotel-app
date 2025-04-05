@@ -11,7 +11,7 @@ import {
 
 export default function Gallery() {
   return (
-    <div className="min-h-[50vh] max-w-5xl mx-auto mt-32 px-4">
+    <div className="min-h-[50vh] max-w-5xl mx-auto mt-32 px-4 overflow-hidden">
       <h3 className="text-2xl md:text-4xl text-center mb-8">
         &ldquo;A Visual Journey Through Luxury&rdquo;
       </h3>

@@ -50,7 +50,7 @@ export default function Header() {
               <Menu size={16} />
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="mx-2 flex flex-col gap-2 text-sm p-4">
+          <DropdownMenuContent className="mx-2 flex flex-col gap-2 text-sm p-4 -translate-x-[10%]">
             {menus.map((el, i) => (
               <Link key={i} href={el.route}>
                 {el.label}

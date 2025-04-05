@@ -1,6 +1,6 @@
 export default function ContactUs() {
   return (
-    <div className="bg-[#d9d9d9] min-h-[50vh] mt-32 flex flex-col justify-center items-center">
+    <div className="bg-[#d9d9d9] min-h-[50vh] mt-32 flex flex-col justify-center items-center py-16">
       <h3 className="text-2xl md:text-4xl text-center mb-8 px-4">
         &ldquo;We&lsquo;re Here to Make Your Stay Exceptional&rdquo;
       </h3>
