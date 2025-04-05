@@ -38,7 +38,7 @@ export default function Room() {
                 // width={500}
                 // height={500}
                 alt="image"
-                className="absolute top-1/2 -translate-y-[50%] object-cover h-full"
+                className="absolute top-1/2 -translate-y-[50%] object-cover h-full w-full"
               />
             </div>
             <p className="text-center text-lg md:text-2xl mt-4 md:mt-8">
