@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,6 +9,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
+const images = [
+  "luxury suites.jpg",
+  "royal.jpg",
+  "deluxe.jpg",
+  "stunning views.jpg",
+  "penthouse.jpg",
+];
 
 export default function Gallery() {
   return (
@@ -22,12 +31,18 @@ export default function Gallery() {
       <div className="flex md:hidden justify-center mb-16">
         <Carousel className="w-full max-w-xs sm:max-w-sm">
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+            {images.map((img, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card className="bg-gray-100 ">
                     <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-4xl font-semibold"></span>
+                      <img
+                        src={`/images/${img}`}
+                        width={500}
+                        height={500}
+                        alt="image"
+                        className="w-full object-cover object-bottom absolute top-1/2 -translate-y-[50%]  object-cover h-full"
+                      />
                     </CardContent>
                   </Card>
                 </div>
@@ -40,11 +55,51 @@ export default function Gallery() {
         </Carousel>
       </div>
       <div className="hidden md:grid grid-cols-12 gap-4 mb-16">
-        <div className="h-48 bg-gray-100 col-span-3"></div>
-        <div className="h-full bg-gray-100 col-span-6 row-span-2"></div>
-        <div className="h-48 bg-gray-100 col-span-3"></div>
-        <div className="h-48 bg-gray-100 col-span-3"></div>
-        <div className="h-48 bg-gray-100 col-span-3"></div>
+        <div className="relative h-48 bg-gray-100 col-span-3">
+          <img
+            src="/images/royal.jpg"
+            width={500}
+            height={500}
+            alt="image"
+            className="w-full object-cover object-bottom absolute top-1/2 -translate-y-[50%]  object-cover h-full"
+          />
+        </div>
+        <div className="relative h-full bg-gray-100 col-span-6 row-span-2">
+          <img
+            src="/images/luxury suites.jpg"
+            width={500}
+            height={500}
+            alt="image"
+            className="w-full object-cover object-bottom absolute top-1/2 -translate-y-[50%]  object-cover h-full"
+          />
+        </div>
+        <div className="relative h-48 bg-gray-100 col-span-3">
+          <img
+            src="/images/deluxe.jpg"
+            width={500}
+            height={500}
+            alt="image"
+            className="w-full object-cover object-bottom absolute top-1/2 -translate-y-[50%]  object-cover h-full"
+          />
+        </div>
+        <div className="relative h-48 bg-gray-100 col-span-3">
+          <img
+            src="/images/penthouse.jpg"
+            width={500}
+            height={500}
+            alt="image"
+            className="w-full object-cover object-bottom absolute top-1/2 -translate-y-[50%]  object-cover h-full"
+          />
+        </div>
+        <div className="relative h-48 bg-gray-100 col-span-3">
+          <img
+            src="/images/stunning views.jpg"
+            width={500}
+            height={500}
+            alt="image"
+            className="w-full object-cover object-bottom absolute top-1/2 -translate-y-[50%]  object-cover h-full"
+          />
+        </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-3">
         <p className="font-montserrat text-sm font-light text-center">

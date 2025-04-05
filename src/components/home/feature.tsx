@@ -1,22 +1,29 @@
+/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+
 const features = [
   {
     title: "Stunning Views",
     description:
       "Breathtaking panoramas of the Dubai skyline and Arabian Gulf.",
+    image: "/images/stunning views.jpg",
   },
   {
     title: "World-Class Dining",
     description: "Exquisite cuisine from Michelin-star chefs.",
+    image: "/images/culinary.jpg",
   },
   {
     title: "Unmatched Comfort",
     description:
       "Lavishly designed rooms and suites with every detail carefully crafted for your ultimate relaxation",
+    image: "/images/luxury suites.jpg",
   },
   {
     title: "Exquisite Service",
     description:
       "24/7 concierge, private butlers, and personalized experiences tailored just for you.",
+    image: "/images/concierge.jpg",
   },
 ];
 
@@ -47,7 +54,15 @@ export default function Feature() {
             <p className="text-xl md:text-3xl">{el.title}</p>
             <p className="text-sm md:text-base">{el.description}</p>
           </div>
-          <div className="min-h-[160px] md:min-h-[316px] border w-full basis-1 md:basis-1/2 lg:basis-7/12 bg-gray-100"></div>
+          <div className="min-h-[200px] md:min-h-[316px] h-[200px] md:h-[316px] border w-full basis-1 md:basis-1/2 lg:basis-7/12 bg-gray-100 overflow-hidden relative">
+            <Image
+              src={el.image}
+              width={500}
+              height={500}
+              alt="image"
+              className="w-full object-cover object-bottom absolute top-1/2 -translate-y-[50%]"
+            />
+          </div>
         </div>
       ))}
     </div>
